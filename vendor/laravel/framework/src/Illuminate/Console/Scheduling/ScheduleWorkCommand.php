@@ -16,15 +16,6 @@ class ScheduleWorkCommand extends Command
     protected $name = 'schedule:work';
 
     /**
-     * The name of the console command.
-     *
-     * This name is used to identify the command during lazy loading.
-     *
-     * @var string|null
-     */
-    protected static $defaultName = 'schedule:work';
-
-    /**
      * The console command description.
      *
      * @var string
@@ -47,7 +38,11 @@ class ScheduleWorkCommand extends Command
 
             if (Carbon::now()->second === 0 &&
                 ! Carbon::now()->startOfMinute()->equalTo($lastExecutionStartedAt)) {
-                $executions[] = $execution = new Process([PHP_BINARY, 'artisan', 'schedule:run']);
+                $executions[] = $execution = new Process([
+                    PHP_BINARY,
+                    defined('ARTISAN_BINARY') ? ARTISAN_BINARY : 'artisan',
+                    'schedule:run',
+                ]);
 
                 $execution->start();
 

@@ -1,0 +1,11 @@
+"id";"main_menu";"sub_menu";"txt_icon_name";"status";"created_at";"updated_at";"order";"txt_function";"sub_menu_status";"main_menu_id"
+1;"Dashboard";"";"chart-line";1;"";"";1;"view_dashboard";0;0
+15;"Orders";"";"cart-shopping";1;"";"";2;"view_orders";0;0
+16;"Customers";"";"users";1;"";"";3;"view_customers";0;0
+17;"Invoice";"";"file-invoice";1;"";"";4;"view_invoice";0;0
+18;"Receipts";"";"receipt";1;"";"";5;"view_receipts";0;0
+19;"Users";"";"user";1;"";"";6;"view_users";0;0
+20;"SMS";"";"message";1;"";"";7;"view_sms";0;0
+21;"Email";"";"bell";1;"";"";8;"view_email";0;0
+22;"Report";"";"print";1;"";"";9;"view_report";0;0
+23;"Configuration";"";"gear";1;"";"";10;"view_report";0;0
